@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Vou ter muito sucesso na programação!
 MESSAGE=$1
 
 if [ -z $MESSAGE ]
