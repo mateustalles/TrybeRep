@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Eu sou Trybe e...
 API_KEY="dae2c3971d465e0502748431908b045f"
 
 CIDADE=$1
