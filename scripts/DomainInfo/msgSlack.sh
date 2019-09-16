@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Eu sou Trybe e...
 MESSAGE=$1
 
 if [ -z $MESSAGE ]
