@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Eu sou Trybe e...
 PALAVRA=$1
 if [ -z $PALAVRA ]
 then
