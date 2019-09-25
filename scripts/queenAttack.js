@@ -12,7 +12,29 @@ function queenAttack(queenPosition,attackedPosition) {
     }
 
 
-    for (var i=0; i< 8; i++) {
+
+    //Diagonal superior-direita (1o quadrante)
+
+    for (var i=0;i<8;i++) {
+        var x_position = queenPosition.x + i;
+        var y_position = queenPosition.y + i;
+
+        // Se o tabuleiro terminou, sai do loop;
+        if (x_position >= 8 || y_position >= 8) {
+            console.log ("Saiu do tabuleiro");
+            break;
+        }
+        //Verifica se está na diagonal-superior-direita, 1o quadrante
+        if(attackedPosition.x == x_position && attackedPosition.y == y_position) {
+            console.log("Na diagonal superior-direita. (1o quadrante)");
+            return true;
+        }
+    }
+
+
+
+    //Diagonal inferior-esquerda,  3o quadrante
+    for (var i=0; i < 8; i++) {
         var x_position = queenPosition.x - i;
         var y_position = queenPosition.y - i;
 
@@ -28,31 +50,14 @@ function queenAttack(queenPosition,attackedPosition) {
         }
       }
 
-        //Diagonal superior-direita (1o quadrante)
-
-        for (var i=0;i<8;i++) {
-            var x_position = queenPosition.x + i;
-            var y_position = queenPosition.y + i;
-
-        // Se o tabuleiro terminou, sai do loop;
-        if (x_position > 8 && y_position > 8) {
-            console.log ("Saiu do tabuleiro");
-            break;
-        }
-        //Verifica se está na diagonal-superior-direita, 1o quadrante
-        if(attackedPosition.x == x_position && attackedPosition.y == y_position) {
-            console.log("Na diagonal superior-direita. (1o quadrante)");
-            return true;
-        }
-
-      }
+      
       //Diagonal superior esquerda
-        for (var i=0;i<8;i++) {
+    for (var i=0; i<8; i++) {
             var x_position = queenPosition.x - i;
             var y_position = queenPosition.y + i;
 
         // Se o tabuleiro terminou, sai do loop;
-        if (x_position < 0 && y_position > 8) {
+        if (x_position < 0 || y_position >= 8) {
             console.log ("Saiu do tabuleiro");
             break;
         }
@@ -65,18 +70,18 @@ function queenAttack(queenPosition,attackedPosition) {
       }
 
     //Diagonal inferior direita
-        for (var i=0;i<8;i++) {
+    for (var i=0; i<8; i++) {
             var x_position = queenPosition.x + i;
             var y_position = queenPosition.y - i;
 
         // Se o tabuleiro terminou, sai do loop;
-        if (x_position > 8 && y_position < 0) {
+        if (x_position >= 8 || y_position < 0) {
             console.log ("Saiu do tabuleiro");
             break;
         }
         //Verifica se está na inferior-direita, 4o quadrante
         if(attackedPosition.x == x_position && attackedPosition.y == y_position) {
-            console.log("Na diagonal superior-direita. (1o quadrante)");
+            console.log("Na diagonal inferior-direita, 4o quadrante");
             return true;
         }
       }
@@ -86,13 +91,14 @@ function queenAttack(queenPosition,attackedPosition) {
 }
 
 queenPosition = {
-    x: 6,
-    y: 4
+    x: 3,
+    y: 3
 };
 
 pawnPosition = {
-    x: 4,
-    y: 3
+    x: 6,
+    y: 0
 };
+
 
 var result = queenAttack(queenPosition,pawnPosition);

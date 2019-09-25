@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p class="stylish" id="paragraph">Dê uma cor para esse parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p class="stylish" id="second-paragraph">Segundo parágrafo!</p>
+
+    <script>
+      var paragraph = document.querySelector("#paragraph");
+      paragraph.style.color = "blue";
+
+      var titulo = document.querySelector("#page-title");
+      titulo.innerHTML = "Título Dois";
+
+      var segundoParagrafo = document.querySelector("#second-paragraph");
+      segundoParagrafo.innerHTML = "Agora este é o segundo parágrafo";
+
+      var subtitulo = document.querySelector("#subtitle");
+      subtitulo.innerHTML = "Este é o novo subtítulo"
+
+      var stylish= document.querySelectorAll(".stylish");
+      console.log(stylish[0],stylish[1]);
+      stylish[0].style.color="yellow";
+
+      var subtituloTag = document.querySelector('h4');
+      console.log (subtituloTag);
+    </script>
+  </body>
+</html>
