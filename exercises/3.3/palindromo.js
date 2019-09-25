@@ -15,4 +15,4 @@ function palindromo(string) {
         return false;
     }
 }
-palindromo('aposasopa');
+palindromo('socorrammesubinoonibusemmarrocos');
