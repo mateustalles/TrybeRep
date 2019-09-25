@@ -1,5 +1,5 @@
 function maiorValor(array) {
-    var maior = 0;
+    var maior = array[0];
     for (let value of array) {
         if (value > maior) {
             maior = value;
