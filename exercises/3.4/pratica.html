@@ -97,6 +97,28 @@
         imgSmall.src="https://picsum.photos/200";
         imgSmall.className="small-image";
         document.querySelector(".left-content").appendChild(imgSmall);
+
+        //Exercício 8
+        var uList = document.createElement('ul');                   
+        uList.id="lista1";        
+        document.querySelector(".right-content").appendChild(uList);
+        function addItem(item) {
+                var listItem = document.createElement('li');
+                listItem.innerHTML=item;
+                document.getElementById("lista1").appendChild(listItem);
+            };
+            
+        addItem("um");
+        addItem("dois");
+        addItem("tres");
+        addItem("quatro");
+        addItem("cinco");
+        addItem("seis");
+        addItem("sete");
+        addItem("oito");
+        addItem("nove");
+        addItem("dez");
+           
     </script>
   </body>
 </html>
