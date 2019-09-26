@@ -31,6 +31,38 @@
     console.log( document.querySelector("#elementoOndeVoceEsta").nextSibling.nextSibling);
 
     console.log (document.querySelector("#pai").lastChild.previousSibling.previousSibling.previousSibling);
+
+    //Parte II:
+  //irmão para elementoOndeVoceEsta
+    var novoirmao = document.createElement("div");
+    novoirmao.id="novoIrmao";
+    //nova div criada
+    console.log(novoirmao);
+    //Inserindo nova div
+    document.getElementById("pai").appendChild(novoirmao);
+    console.log(document.getElementById("pai"));
+
+    //Criando filho para elementoOndeVoceEsta:
+
+    var novoFilho = document.createElement("div");
+    novoFilho.id="novoFilho";
+    //inserindo nova div
+    document.getElementById("elementoOndeVoceEsta").appendChild(novoFilho);
+    console.log(document.querySelector("#elementoOndeVoceEsta"));
+
+    //filho pra primeiroFilhoDoFilho
+    var neto = document.createElement('div');
+    neto.id="netoDoPrimeiroFilho",
+    neto.class="classe";
+    document.getElementById("primeiroFilhoDoFilho").appendChild(neto);
+    console.log(neto.class,    document.getElementById("primeiroFilhoDoFilho"));
+
+    //a partir de netoDoPrimeiroFilho, acessar terceiroFilho
+
+    console.log(document.getElementById("netoDoPrimeiroFilho").parentNode.parentNode.nextSibling.nextSibling);
+
+
+
 </script>
 </body>
 
