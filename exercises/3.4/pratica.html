@@ -71,26 +71,32 @@
 
         var divCenter = document.createElement("div");
         divCenter.className="center-content";
-        document.getElementsByClassName("main-content")[0].appendChild(divCenter);
+        document.querySelector(".main-content").appendChild(divCenter);
 
         //Exercício 4
 
         var p = document.createElement("p");
         p.innerHTML="#VAMO QUE VAMO";
-        document.getElementsByClassName("center-content")[0].appendChild(p);
+        document.querySelector(".center-content").appendChild(p);
 
         //Exercício 5
 
-        var divLeft = document.createElement('p');
+        var divLeft = document.createElement('div');
         divLeft.className = "left-content";
-        document.getElementsByClassName("main-content")[0].appendChild(divLeft);
+        document.querySelector(".main-content").appendChild(divLeft);
 
         //Exercício 6
 
         var divRight = document.createElement("div");
         divRight.className = "right-content";
-        document.getElementsByClassName("main-content")[0].appendChild(divRight);
+        document.querySelector(".main-content").appendChild(divRight);
 
+        //Exercício 7
+
+        var imgSmall = document.createElement('img');
+        imgSmall.src="https://picsum.photos/200";
+        imgSmall.className="small-image";
+        document.querySelector(".left-content").appendChild(imgSmall);
     </script>
   </body>
 </html>
