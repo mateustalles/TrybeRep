@@ -61,6 +61,24 @@
 
     console.log(document.getElementById("netoDoPrimeiroFilho").parentNode.parentNode.nextSibling.nextSibling);
 
+  //Exercícios com remove
+  //Removendo divs ="segundoEUltimoFilhoDoFilho" e "novoFilho"
+  var segundoEUltimo = document.getElementById("segundoEUltimoFilhoDoFilho");
+  document.getElementById("elementoOndeVoceEsta").removeChild(segundoEUltimo);
+  document.getElementById("elementoOndeVoceEsta").removeChild(novoFilho);
+
+  //removendo divs primeiroFilho, terceiroFilho, quartoEUltimoFilho
+  //e novoIrmao
+  
+  var primeiroFilho = document.getElementById("primeiroFilho");
+  var terceiroFilho = document.getElementById("terceiroFilho");
+  var quartoFilho = document.getElementById("quartoEUltimoFilho");
+  var novoIrmao = document.getElementById("novoIrmao");
+  document.getElementById("pai").removeChild(primeiroFilho);
+  document.getElementById("pai").removeChild(terceiroFilho);
+  document.getElementById("pai").removeChild(quartoFilho);
+  document.getElementById("pai").removeChild(novoIrmao);
+
 
 
 </script>
