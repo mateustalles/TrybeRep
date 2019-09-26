@@ -1,4 +1,10 @@
-<div id="pai">
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+    <body>
+<div id="pai">Texto - Teste (div pai)
   <div id="primeiroFilho"></div>
   <div id="elementoOndeVoceEsta">
     <div id="primeiroFilhoDoFilho"></div>
@@ -7,3 +13,25 @@
   <div id="terceiroFilho"></div>
   <div id="quartoEUltimoFilho"></div>
 </div>
+
+<script>
+    console.log (
+        document.getElementById("elementoOndeVoceEsta")
+            
+    );
+
+    var paiDeElementoOndeEstou = document.querySelector("#elementoOndeVoceEsta").parentNode;
+    paiDeElementoOndeEstou.style.color="lightblue";
+
+    var primeiroNeto = document.querySelector("#primeiroFilhoDoFilho");
+    primeiroNeto.innerHTML="Algum texto";
+
+    var ondeEstou = document.querySelector("#elementoOndeVoceEsta");
+    console.log(document.querySelector("#elementoOndeVoceEsta").previousSibling.previousSibling);
+    console.log( document.querySelector("#elementoOndeVoceEsta").nextSibling.nextSibling);
+
+    console.log (document.querySelector("#pai").lastChild.previousSibling.previousSibling.previousSibling);
+</script>
+</body>
+
+</html>
