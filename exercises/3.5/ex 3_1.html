@@ -21,13 +21,26 @@
   catWalk.style.width="100px"
   catWalk.style.position="absolute";
   catWalk.style.top="300px";
-  catWalk.addEventListener("click", function() {
-    setInterval (function() {catImg.style.left= parseInt(catImg.style.left)+10+"px";
-    if (parseInt(catImg.style.left) > window.innerWidth) {
-        catImg.style.left="0px";
-    }}, 50)
 
-  });
+
+  catWalk.addEventListener("click", function() {
+        var movimento = setInterval (gatoAnda, 50);
+        function gatoAnda() {        
+        catImg.style.left= parseInt(catImg.style.left)+50+"px";
+            if ( parseInt(catImg.style.left) > window.innerWidth)  {
+                clearInterval(movimento);
+                var volta = setInterval (gatoVolta, 50);
+                function gatoVolta() { 
+                    catImg.style.left= parseInt(catImg.style.left)-50+"px";
+                     if ( parseInt(catImg.style.left) < 0){
+                         clearInterval(volta);
+                         var movimento = setInterval (gatoAnda, 50);
+                         }
+                    }
+                }
+            }
+        }
+);
   
   </script>
  </body>
