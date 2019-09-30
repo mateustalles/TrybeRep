@@ -22,7 +22,11 @@
   catWalk.style.position="absolute";
   catWalk.style.top="300px";
   catWalk.addEventListener("click", function() {
-    setInterval (function() {catImg.style.left= parseInt(catImg.style.left)+10+"px";}, 50)
+    setInterval (function() {catImg.style.left= parseInt(catImg.style.left)+10+"px";
+    if (parseInt(catImg.style.left) > window.innerWidth) {
+        catImg.style.left="0px";
+    }}, 50)
+
   });
   
   </script>
