@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+  var squareBt = document.querySelector("#square-button"),
+        halfBt = document.querySelector("#half-button"),
+        percentBt = document.querySelector("#percent-button"),
+        areaBt = document.querySelector("#area-button");
+
+    var squareV = document.querySelector("#square-input"),
+    halfV = document.querySelector("#half-input"),
+    percentV1 = document.querySelector("#percent1-input"),
+    percentV2 = document.querySelector("#percent2-input"),
+    areaV = document.querySelector("#area-input");
+
+
+    
+    squareBt.addEventListener('click', function() {
+    var result = Math.sqrt(squareV.value);
+    document.getElementById("solution").innerHTML=result;
+}); 
+   
+
+    halfBt.addEventListener("click", function() {
+    let result = halfV.value/2;
+    document.getElementById("solution").innerHTML=result;
+
+  });
+    percentBt.addEventListener("click",  function(){
+    let result = percentV1.value*percentV2.value/100;
+     document.getElementById("solution").innerHTML=result;
+  });
+    areaBt.addEventListener("click", function(){
+    let result = Math.PI*Math.pow(areaV.value,2);
+     document.getElementById("solution").innerHTML=result;
+
+  });
+
+  </script>
+
+</body>
+</html>
